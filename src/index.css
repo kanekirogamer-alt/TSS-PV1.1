@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Today Social Skills vibrant palette */
+    --background: 0 0% 100%;
+    --foreground: 237 56% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 237 56% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 237 56% 20%;
+
+    /* Primary - Bright Blue #26A9E0 */
+    --primary: 197 74% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Green #8BC53F */
+    --secondary: 88 54% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 197 20% 95%;
+    --muted-foreground: 237 30% 40%;
+
+    /* Accent - Orange #F05A28 */
+    --accent: 15 87% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 197 20% 88%;
+    --input: 197 20% 88%;
+    --ring: 197 74% 51%;
+
+    --radius: 1rem;
+
+    /* Brand colors */
+    --brand-blue: 197 74% 51%;
+    --brand-green: 88 54% 51%;
+    --brand-yellow: 44 94% 51%;
+    --brand-purple: 308 58% 38%;
+    --brand-indigo: 237 56% 47%;
+    --brand-orange: 15 87% 55%;
+    --brand-pink: 331 86% 50%;
+
+    /* Custom tokens */
+    --teal-light: 197 50% 95%;
+    --teal-medium: 197 55% 85%;
+    --coral-light: 15 80% 95%;
+    --navy: 237 56% 20%;
+    --cream: 0 0% 98%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(197 74% 51%) 0%, hsl(237 56% 47%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(15 87% 55%) 0%, hsl(331 86% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(197 20% 98%) 100%);
+    --gradient-vibrant: linear-gradient(135deg, hsl(308 58% 38%) 0%, hsl(331 86% 50%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(237 56% 20% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(237 56% 20% / 0.1);
+    --shadow-lg: 0 16px 40px -8px hsl(237 56% 20% / 0.12);
+    --shadow-glow: 0 0 40px hsl(197 74% 51% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 237 30% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 237 30% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 237 30% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 197 74% 55%;
+    --primary-foreground: 237 30% 10%;
+
+    --secondary: 88 54% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 237 20% 18%;
+    --muted-foreground: 197 15% 60%;
+
+    --accent: 15 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 237 20% 20%;
+    --input: 237 20% 20%;
+    --ring: 197 74% 55%;
+
+    --brand-blue: 197 74% 55%;
+    --brand-green: 88 54% 55%;
+    --brand-yellow: 44 94% 55%;
+    --brand-purple: 308 58% 45%;
+    --brand-indigo: 237 56% 55%;
+    --brand-orange: 15 87% 60%;
+    --brand-pink: 331 86% 55%;
+
+    --teal-light: 197 30% 15%;
+    --teal-medium: 197 35% 20%;
+    --coral-light: 15 40% 15%;
+    --navy: 0 0% 95%;
+    --cream: 237 30% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-vibrant {
+    background: var(--gradient-vibrant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-brand-blue {
+    color: hsl(var(--brand-blue));
+  }
+
+  .text-brand-green {
+    color: hsl(var(--brand-green));
+  }
+
+  .text-brand-yellow {
+    color: hsl(var(--brand-yellow));
+  }
+
+  .text-brand-purple {
+    color: hsl(var(--brand-purple));
+  }
+
+  .text-brand-indigo {
+    color: hsl(var(--brand-indigo));
+  }
+
+  .text-brand-orange {
+    color: hsl(var(--brand-orange));
+  }
+
+  .text-brand-pink {
+    color: hsl(var(--brand-pink));
+  }
+
+  .bg-brand-blue {
+    background-color: hsl(var(--brand-blue));
+  }
+
+  .bg-brand-green {
+    background-color: hsl(var(--brand-green));
+  }
+
+  .bg-brand-yellow {
+    background-color: hsl(var(--brand-yellow));
+  }
+
+  .bg-brand-purple {
+    background-color: hsl(var(--brand-purple));
+  }
+
+  .bg-brand-indigo {
+    background-color: hsl(var(--brand-indigo));
+  }
+
+  .bg-brand-orange {
+    background-color: hsl(var(--brand-orange));
+  }
+
+  .bg-brand-pink {
+    background-color: hsl(var(--brand-pink));
+  }
+}
